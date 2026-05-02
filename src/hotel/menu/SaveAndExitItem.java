@@ -19,11 +19,12 @@ public class SaveAndExitItem extends HotelItem {
     public void perform() {
         try {
             context.saveAll();
-            inOut.outputlLine("data saved successfully");
+            inOut.outputlLine("Data saved successfully");
         } catch (IOException e) {
-            throw new IllegalStateException("Failed to save data: " + e.getMessage());
+            inOut.outputlLine("Failed to save  " + e.getMessage());
         }
     }
+
 
     @Override
     public boolean isExit() {
